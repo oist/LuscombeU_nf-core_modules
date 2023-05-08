@@ -1,0 +1,12 @@
+## TODO nf-core: Please run the following command to build this file:
+#                nf-core modules create-test-yml ncbi/datasetscli
+- name: "ncbi datasetscli"
+  command: nextflow run ./tests/modules/nf-core/ncbi/datasetscli -entry test_ncbi_datasetscli -c ./tests/config/nextflow.config -c ./tests/modules/nf-core/ncbi/datasetscli/nextflow.config
+  tags:
+    - "ncbi"
+    - "ncbi/datasetscli"
+  files:
+    - path: "output/ncbi/test.bam"
+      md5sum: e667c7caad0bc4b7ac383fd023c654fc
+    - path: "output/ncbi/versions.yml"
+      md5sum: a01fe51bc4c6a3a6226fbf77b2c7cf3b

@@ -2411,6 +2411,10 @@ nanoplot:
   - modules/nf-core/nanoplot/**
   - tests/modules/nf-core/nanoplot/**
 
+ncbi/datasetscli:
+  - modules/nf-core/ncbi/datasetscli/**
+  - tests/modules/nf-core/ncbi/datasetscli/**
+
 ncbigenomedownload:
   - modules/nf-core/ncbigenomedownload/**
   - tests/modules/nf-core/ncbigenomedownload/**

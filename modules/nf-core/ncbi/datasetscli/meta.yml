@@ -1,0 +1,48 @@
+name: "ncbi_datasetscli"
+description: datasets is a command-line tool that is used to query and download biological sequence data across all domains of life from NCBI databases.
+keywords:
+  - data
+  - download
+  - NCBI
+tools:
+  - "ncbi":
+      description: "datasets is a command-line tool that is used to query and download biological sequence data across all domains of life from NCBI databases."
+      homepage: "https://www.ncbi.nlm.nih.gov/datasets/docs/v2/download-and-install/"
+      documentation: "https://www.ncbi.nlm.nih.gov/datasets/docs/v2/download-and-install/"
+      tool_dev_url: "https://github.com/ncbi/datasets"
+      doi: ""
+      licence: "Public Domain"
+
+input:
+  - meta:
+      type: map
+      description: |
+        Groovy Map containing sample information
+        e.g. [ id:'test', single_end:false ]
+  - command:
+      type: text
+      description: The command to run: either `summary`, `download` or `rehydrate`.
+  - subcommand:
+      type: text
+      description: The subcommand to run, such as `gene`, `genome`, `virus gene`, `virus genome`, or an empty value.
+  - by:
+      type: text
+      description: The name of the key in the `meta` map that contains the identifier to use with this command.
+
+output:
+  - meta:
+      type: map
+      description: |
+        Groovy Map containing sample information
+        e.g. [ id:'test', single_end:false ]
+  - versions:
+      type: file
+      description: File containing software versions
+      pattern: "versions.yml"
+  - zip:
+      type: file
+      description: Compressed file archive downloaded by the NCBI datasets CLI tool.
+      pattern: "*.{zip}"
+
+authors:
+  - "@charles-plessy"
