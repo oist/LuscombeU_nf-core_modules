@@ -4,8 +4,8 @@ process NCBI_DATASETSCLI {
 
     conda "ncbi-datasets-cli"
     container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
-        'https://depot.galaxyproject.org/singularity/ncbi-datasets-cli:13.14.0':
-        'quay.io/biocontainers/ncbi-datasets-cli:13.14.0' }"
+        'https://depot.galaxyproject.org/singularity/ncbi-datasets-cli:14.26.0':
+        'biocontainers/ncbi-datasets-cli:14.26.0' }"
 
     input:
     val(meta)
