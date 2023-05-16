@@ -25,6 +25,7 @@ process NCBI_DATASETSCLI {
     def prefix = task.ext.prefix ?: "${meta.id}"
     def by_id = meta[0][by]
     """
+    [ -e /usr/local/ssl/cacert.pem ] && export SSL_CERT_FILE=/usr/local/ssl/cacert.pem
     datasets \\
         download \\
         $command $subcommand \\
